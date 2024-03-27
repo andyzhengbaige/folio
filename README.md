@@ -2,6 +2,10 @@
 
 This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
 
+## Vercel deployment
+
+[Link to deployment](https://folio-zeta-gilt.vercel.app/)
+
 ## The stack
 
 - [Next.js](https://nextjs.org)
