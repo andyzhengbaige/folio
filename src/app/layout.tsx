@@ -3,7 +3,18 @@ import "~/styles/globals.css";
 import { Inter } from "next/font/google";
 
 import { TRPCReactProvider } from "~/trpc/react";
-import { ClerkProvider } from "@clerk/nextjs";
+import { ClerkProvider, SignInButton, UserButton, currentUser } from "@clerk/nextjs";
+
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu"
+
+
 
 const inter = Inter({
   subsets: ["latin"],
@@ -16,17 +27,35 @@ export const metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
-export default function RootLayout({
+
+
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+
+  const user = await currentUser();
+  console.log(user)
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={`font-sans ${inter.variable}`}>
-          <TRPCReactProvider>{children}</TRPCReactProvider>
-        </body>
+          <head>
+            <title>folio</title>
+          </head>
+          <body className={`font-sans ${inter.variable} min-h-screen flex-col bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white`}>
+            <div className="flex container bg-white/10 mx-auto rounded-full items-center">
+              <div className="justify-center w-15 h-15 p-3">
+                <UserButton />
+              </div>
+              {!user && <div className="rounded-full bg-white/10 px-5 py-3 font-semibold transition hover:bg-white/20 h-10">
+                <span className="align-top md:align-top">
+                  <SignInButton />
+                </span>
+              </div>}
+            </div>
+            <TRPCReactProvider>{children}</TRPCReactProvider>
+          </body>
       </html>
     </ClerkProvider>
   );
