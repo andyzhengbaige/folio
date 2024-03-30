@@ -15,8 +15,28 @@ This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3
 - [tRPC](https://trpc.io)
 - [Clerk](https://clerk.com/)
 - [Supabase](https://supabase.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
 
 ## Setup
+
+### Choose a setup below
+
+- [Setup with Docker](#setup-with-docker)
+- [Setup without Docker](#setup-without-docker)
+
+### Setup with Docker 
+
+1. [Download Docker](https://www.docker.com/products/docker-desktop/)
+
+2. `docker -v` to check installation
+
+3. run `docker compose build` in the root directory of the project
+
+4. run `docker compose watch` to start the container for development
+
+5. [localhost:3000](localhost:3000)
+
+### Setup without Docker
 
 [Download the latest version of Node.js](https://nodejs.org/en)
 
@@ -41,3 +61,6 @@ Create .env file if it does not exist
 Ask repo owner for environment variables
 
 `yarn dev`
+
+
+

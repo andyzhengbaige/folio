@@ -8,7 +8,6 @@ export default async function Home() {
 
   return (
     <main>
-      
       <div className="container items-center content-center box-border h-280 w-320 p-4 sm mx-auto object-center justify-center flex flex-col">
         <CrudShowcase />
       </div>

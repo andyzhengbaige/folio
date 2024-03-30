@@ -36,7 +36,6 @@ export default async function RootLayout({
 }) {
 
   const user = await currentUser();
-  console.log(user)
   return (
     <ClerkProvider>
       <html lang="en">
