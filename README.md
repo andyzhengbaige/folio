@@ -4,7 +4,7 @@ This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3
 
 ## Vercel deployment
 
-[Link to deployment](https://folio-zeta-gilt.vercel.app/)
+<a href="https://folio-zeta-gilt.vercel.app/">Link to deployment<a/>
 
 ## The stack
 
