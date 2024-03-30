@@ -19,6 +19,10 @@ This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3
 
 ## Setup
 
+Create a .env file and paste everything in .env.example in.
+
+change the values of each variable to the appropriate values.
+
 ### Choose a setup below
 
 - [Setup with Docker](#setup-with-docker)
@@ -35,6 +39,8 @@ This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3
 4. run `docker compose watch` to start the container for development
 
 5. [localhost:3000](localhost:3000)
+
+Remember to stop the container when done with development
 
 ### Setup without Docker
 
