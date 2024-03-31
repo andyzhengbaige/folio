@@ -9,10 +9,10 @@ This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3
 ## The stack
 
 - [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
 - [Drizzle](https://orm.drizzle.team)
 - [Tailwind CSS](https://tailwindcss.com)
 - [tRPC](https://trpc.io)
+- [Zod](https://zod.dev/)
 - [Clerk](https://clerk.com/)
 - [Supabase](https://supabase.com/)
 - [shadcn/ui](https://ui.shadcn.com/)
