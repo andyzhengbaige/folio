@@ -1,0 +1,19 @@
+name: basic tests
+run-name: test
+on: [push]
+jobs:
+  Simple-Tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.11.1'
+      
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Lint files
+        run: yarn lint
