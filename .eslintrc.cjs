@@ -40,6 +40,12 @@ const config = {
     ],
     "drizzle/enforce-delete-with-where": "error",
     "drizzle/enforce-update-with-where": "error"
-  }
+  },
+  "overrides": [
+      {
+       "files": ["*.ts", "*.tsx"],
+       "parser": "@typescript-eslint/parser"
+     }
+  ]
 }
 module.exports = config;
