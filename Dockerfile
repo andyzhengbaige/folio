@@ -1,8 +1,8 @@
-FROM node:20.11.1-bullseye-slim AS base
+FROM node:20.11.1-alpine AS base
 
 # Install dependencies only when needed
 FROM base AS deps
-
+RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
 # Install dependencies based on the preferred package manager
